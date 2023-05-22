@@ -11,11 +11,10 @@ package W4;
  * 22104410015
  * Teknik Informatika
  */
-import java.util.Scanner;
 
-public class mainKinetic {
-    private double massa;
-    private double kecepatan;
+public class MainKinetik {
+    public double massa;
+    public double kecepatan;
 
     public double getMassa() {
         return massa;
@@ -38,14 +37,12 @@ public class mainKinetic {
     }
 
     public double hitungEnergiKinetik() {
-        return 0.5 * massa * kecepatan * kecepatan;
+        return 0.5 * Math.pow(kecepatan, 2);
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         MainKinetik objek = new MainKinetik();
-
         System.out.print("Masukkan massa objek: ");
         double massa = scanner.nextDouble();
         objek.setMassa(massa);
